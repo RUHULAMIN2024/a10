@@ -18,7 +18,7 @@ const AddTouristsSpot = () => {
     const onSubmit = data => {
         const info={...data, userEmail, userName}
 
-        fetch('http://localhost:5000/tourists-spot', {
+        fetch('http://localhost:5000/tourist-spots', {
             method:'POST',
             headers:{
                 'content-type':'application/json'
@@ -43,8 +43,8 @@ const AddTouristsSpot = () => {
     return (
         <div>
             <Helmet><title>Dream Wander | Add tourist Spot</title></Helmet>
-            <form onSubmit={handleSubmit(onSubmit)} className="container p-8 my-12 rounded-2xl bg-base-200 flex flex-col mx-auto space-y-12">
-                <h2 className="text-4xl text-center font-semibold">Add Tourist Spot</h2>
+            <form onSubmit={handleSubmit(onSubmit)} className="container p-10 my-12 rounded-2xl bg-base-200 mx-auto">
+                <h2 className="text-3xl mb-3 text-center font-bold">Add Tourist Spot</h2>
                 <div className="grid grid-cols-6  mx-auto gap-4">
                 
                     <div className="col-span-full md:col-span-4">

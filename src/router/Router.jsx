@@ -16,7 +16,7 @@ const router = createBrowserRouter([
         {
           path:"/",
           element:<Home></Home>,
-          loader: ()=> fetch('/fakeData.json')
+          loader: ()=> fetch('http://localhost:5000/tourist-spots')
         },
         // {
         //   path:"/:id",
