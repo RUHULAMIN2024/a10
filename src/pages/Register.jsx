@@ -41,7 +41,7 @@ const Register = () => {
         createUser(email, password)
             .then(result => {
                 userUpdate(name, photo)
-                toast.success("Wow you have succesfuly registered!")
+                toast.success("you have succesfuly registered!")
             })
             .catch(error=>{
                 toast.error("Firebase Error")
@@ -54,7 +54,7 @@ const Register = () => {
 
     return (
         <div className="card-body rounded-xl shrink-0 w-full max-w-sm my-5 mx-auto bg-base-200">
-            <Helmet><title>Dream House | Register</title></Helmet>
+            <Helmet><title>Dream Wander | Register</title></Helmet>
             <h2 className="text-3xl text-center">Please Register</h2>
             <form onSubmit={handleSubmit(onSubmit)} >
                 <div className="form-control">
