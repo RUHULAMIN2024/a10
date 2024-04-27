@@ -20,7 +20,7 @@ const Nav = () => {
   }
   const links = <>
     <NavLink to="/" className={({ isActive }) => isActive ? 'text-white bg-secondary py-2  px-3 rounded-sm font-bold' : 'font-bold px-3 py-2'}>Home</NavLink>
-    <NavLink to="/all-tourists-spot" className={({ isActive }) => isActive ? 'text-white bg-secondary py-2  px-3 rounded-sm font-bold' : 'font-bold px-3 py-2'}>All Tourists Spot</NavLink>
+    <NavLink to="/all-tourist-spots" className={({ isActive }) => isActive ? 'text-white bg-secondary py-2  px-3 rounded-sm font-bold' : 'font-bold px-3 py-2'}>All Tourists Spot</NavLink>
     <NavLink to="/add-tourists-spot" className={({ isActive }) => isActive ? 'text-white bg-secondary py-2  px-3 rounded-sm font-bold' : 'font-bold px-3 py-2'}>Add Tourists Spot</NavLink>
     <NavLink to="/my-list" className={({ isActive }) => isActive ? 'text-white bg-secondary py-2  px-3 rounded-sm font-bold' : 'font-bold px-3 py-2'}>My List</NavLink>
   </>
