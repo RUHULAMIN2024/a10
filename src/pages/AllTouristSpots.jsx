@@ -1,16 +1,17 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 import { useLoaderData } from "react-router-dom";
 import SpotCard from "../components/SpotCard";
 
 const AllTouristsSports = () => {
     const touristSpots = useLoaderData();
-    const [spots, setSpots]=useState(touristSpots)
+    const [spots, setSpots] = useState(touristSpots)
 
     const handleSelect = (e) => {
-        let item=[...spots]
+        let item = [...spots]
         if (e.target.value === 'average_cost') {
             item.sort((a, b) => {
-                return parseFloat(b.average_cost) - parseFloat(a.average_cost) 
+                return parseFloat(b.average_cost) - parseFloat(a.average_cost)
             });
         }
         setSpots(item);
@@ -18,6 +19,7 @@ const AllTouristsSports = () => {
 
     return (
         <div className="container mx-auto">
+            <Helmet><title>Dream Wander | All Spot</title></Helmet>
             <div className="text-center mt-10">
                 <select onChange={handleSelect} className="select text-2xl text-white bg-primary border-none  ">
                     <option defaultValue>Sort By</option>

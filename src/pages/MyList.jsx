@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useContext, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 
@@ -10,12 +11,10 @@ const MyList = () => {
     const [items, setItems] = useState([])
     const { userInfo } = useContext(AuthContext);
     const userEmail = userInfo?.email;
-    console.log(userEmail)
     useEffect(() => {
         fetch(`http://localhost:5000/tourist-spots/${userEmail}`)
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 setItems(data)
             })
     }, [userEmail])
@@ -72,7 +71,7 @@ const MyList = () => {
                                     <td>{item.tourists_spot_name}</td>
                                     <td>{item.location}</td>
                                     <td>{item.travel_time}</td>
-                                    <td><button className="btn bg-primary btn-sm text-white hover:text-primary">Edit</button></td>
+                                    <td><Link to={`/update-spot/${item._id}`} className="btn bg-primary btn-sm text-white hover:text-primary">Edit</Link></td>
                                     <td><button onClick={()=>handleDelete(item._id)} className="btn bg-secondary btn-sm text-white hover:text-red-500">Delete</button></td>
                                 </tr>
                             ))

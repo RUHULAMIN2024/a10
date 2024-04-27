@@ -8,6 +8,7 @@ import AddTouristSpot from "../pages/AddTouristSpot";
 import PrivetRoute from "./PrivetRoute";
 import AllTouristsSports from "../pages/AllTouristSpots";
 import MyList from "../pages/MyList";
+import UpdateSpot from "../pages/UpdateSpot";
 
 const router = createBrowserRouter([
     {
@@ -24,6 +25,11 @@ const router = createBrowserRouter([
           path:"/all-tourist-spots",
           element:<AllTouristsSports></AllTouristsSports>,
           loader: ()=> fetch('http://localhost:5000/tourist-spots')
+        },
+        {
+          path:"/update-spot/:id",
+          element:<UpdateSpot></UpdateSpot>,
+          loader: ({params})=> fetch(`http://localhost:5000/single-spot/${params.id}`)
         },
         {
           path:"/my-list",

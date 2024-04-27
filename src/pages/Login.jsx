@@ -40,7 +40,7 @@ const Login = () => {
                     <label className="label">
                         <span className="label-text">Email</span>
                     </label>
-                    <input type="email" placeholder="Email" className="input input-bordered" {...register("email", { required: true })} />
+                    <input type="email" defaultValue="Email" className="input input-bordered" {...register("email", { required: true })} />
                     {errors.email && <span className="text-red-500">This field is required</span>}
                 </div>
                 <div className="form-control">
@@ -52,7 +52,7 @@ const Login = () => {
                             }
                         </span>
                     </label>
-                    <input type={showPassword?"text":"password"} placeholder="Password" className="input input-bordered" {...register("password", { required: true })} />
+                    <input type={showPassword?"text":"password"} defaultValue="Password" className="input input-bordered" {...register("password", { required: true })} />
                     {errors.password && <span className="text-red-500">This field is required</span>}
                     <label className="label">
                         <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
