@@ -8,7 +8,7 @@ const AddTouristsSpot = () => {
 
     const { userInfo } = useContext(AuthContext);
     const userName= userInfo.displayName;
-    const userEmail= userInfo.email || null;
+    const userEmail= userInfo.email;
     const {
         register,
         handleSubmit,
