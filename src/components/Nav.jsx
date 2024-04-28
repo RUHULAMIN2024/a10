@@ -28,7 +28,7 @@ const Nav = () => {
 
   const { logout, userInfo } = useContext(AuthContext)
   return (
-    <div className="navbar shadow-lg animate__fadeInDown animate__animated container mx-auto sticky top-0 z-10 my-3 bg-base-100">
+    <div className="navbar shadow-lg animate__fadeInDown mb-10 animate__animated container mx-auto sticky top-0 z-10 my-3 bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -69,7 +69,7 @@ const Nav = () => {
           </>
             :
             <>
-              <Link to="/register" className="btn  btn-sm md:btn-md text-white hover:text-primary bg-primary">Register</Link>
+              <Link to="/register" className="btn  btn-sm md:btn-md text-white hover:text-primary bg-secondary">Register</Link>
               <Link to="/login" className="btn ml-3  btn-sm md:btn-md text-white hover:text-primary bg-primary">Login</Link>
             </>
         }
