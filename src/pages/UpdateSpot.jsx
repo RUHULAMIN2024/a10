@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet";
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const UpdateSpot = () => {
 
@@ -58,6 +59,14 @@ const UpdateSpot = () => {
             .then(res => res.json(updateSpot))
             .then(data => {
                 console.log(data)
+                if(data.modifiedCount>0){
+                    Swal.fire({
+                        title: "success",
+                        text: "Spot Updated Successfully ",
+                        icon: "success"
+                    
+                      });
+                }
             })
     }
 

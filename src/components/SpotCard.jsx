@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
 
 const SpotCard = ({spot}) => {
 
     const {
+        _id,
         tourists_spot_name,
         country_Name,
         image,
@@ -28,7 +30,7 @@ const SpotCard = ({spot}) => {
                     <p><span className="font-bold">Average Cost:</span> {average_cost}</p>
                     <p><span className="font-bold">Travel Time:</span> {travel_time}</p>
                 </div>
-                <button className="w-full mt-5 btn bg-secondary">View Details</button>
+                <Link to={`/details/${_id}`} className="w-full mt-5 btn bg-secondary">View Details</Link>
             </div>
         </div>
 

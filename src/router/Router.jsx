@@ -9,6 +9,7 @@ import PrivetRoute from "./PrivetRoute";
 import AllTouristsSports from "../pages/AllTouristSpots";
 import MyList from "../pages/MyList";
 import UpdateSpot from "../pages/UpdateSpot";
+import Details from "../pages/Details";
 
 const router = createBrowserRouter([
     {
@@ -35,11 +36,11 @@ const router = createBrowserRouter([
           path:"/my-list",
           element:<PrivetRoute><MyList></MyList></PrivetRoute>
         },
-        // {
-        //   path:"/:id",
-        //   element:<PrivetRoute><Details></Details></PrivetRoute>,
-        //   loader: ()=> fetch('/fakeData.json'),
-        // },
+        {
+          path:"/details/:id",
+          element:<PrivetRoute><Details></Details></PrivetRoute>,
+          loader: ({params})=> fetch(`http://localhost:5000/single-spot/${params.id}`),
+        },
         {
           path:"/login",
           element:<Login></Login>,
