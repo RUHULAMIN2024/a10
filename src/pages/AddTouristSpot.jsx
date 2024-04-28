@@ -49,53 +49,53 @@ const AddTouristsSpot = () => {
                 
                     <div className="col-span-full md:col-span-4">
                         <label htmlFor="firstname">Tourist Spot Name</label>
-                        <input id="firstname" type="text" defaultValue="Tourist Spot Name" className="w-full rounded-md focus:ring focus:ring-opacity-75 p-2" {...register("tourists_spot_name", { required: true })} />
+                        <input id="firstname" type="text" placeholder="Tourist Spot Name" className="w-full rounded-md focus:ring focus:ring-opacity-75 p-2" {...register("tourists_spot_name", { required: true })} />
                         {errors.tourists_spot_name && <span className="text-red-500 text-sm">This field is required</span>}
                     </div>
                     <div className="col-span-full md:col-span-2">
                         <label htmlFor="firstname">Country Name</label>
-                        <input id="firstname" type="text" defaultValue="Country Name" className="w-full rounded-md focus:ring focus:ring-opacity-75 p-2" {...register("country_Name", { required: true })} />
+                        <input id="firstname" type="text" placeholder="Country Name" className="w-full rounded-md focus:ring focus:ring-opacity-75 p-2" {...register("country_Name", { required: true })} />
                         {errors.country_Name && <span className="text-red-500 test-sm">This field is required</span>}
                     </div>
                     <div className="col-span-full md:col-span-2">
                         <label htmlFor="firstname">Location </label>
-                        <input id="firstname" type="text" defaultValue="Location " className="w-full rounded-md focus:ring focus:ring-opacity-75 p-2" {...register("location", { required: true })} />
+                        <input id="firstname" type="text" placeholder="Location " className="w-full rounded-md focus:ring focus:ring-opacity-75 p-2" {...register("location", { required: true })} />
                         {errors.location && <span className="text-red-500 test-sm">This field is required</span>}
                     </div>
                     <div className="col-span-full md:col-span-4">
                         <label htmlFor="firstname">Image URL</label>
-                        <input id="firstname" type="text" defaultValue="Image URL" className="w-full rounded-md focus:ring focus:ring-opacity-75 p-2" {...register("image", { required: true })} />
+                        <input id="firstname" type="text" placeholder="Image URL" className="w-full rounded-md focus:ring focus:ring-opacity-75 p-2" {...register("image", { required: true })} />
                         {errors.image && <span className="text-red-500 text-sm">This field is required</span>}
                     </div>
                     
                     
                     <div className="col-span-full">
                         <label htmlFor="firstname">Short Description</label>
-                        <input id="firstname" type="text" defaultValue="Short Description" className="w-full rounded-md focus:ring focus:ring-opacity-75 p-2" {...register("short_description", { required: true })} />
+                        <input id="firstname" type="text" placeholder="Short Description" className="w-full rounded-md focus:ring focus:ring-opacity-75 p-2" {...register("short_description", { required: true })} />
                         {errors.short_description && <span className="text-red-500 test-sm">This field is required</span>}
                     </div>
                     
                     
                     <div className="col-span-full md:col-span-3">
                         <label htmlFor="firstname">Average Cost</label>
-                        <input id="firstname" type="text" defaultValue="Average Cost" className="w-full rounded-md focus:ring focus:ring-opacity-75 p-2" {...register("average_cost", { required: true })} />
+                        <input id="firstname" type="text" placeholder="Average Cost" className="w-full rounded-md focus:ring focus:ring-opacity-75 p-2" {...register("average_cost", { required: true })} />
                         {errors.average_cost && <span className="text-red-500 test-sm">This field is required</span>}
                     </div>
                     <div className="hidden md:flex col-span-3"></div>
                     <div className="col-span-full md:col-span-2">
                         <label htmlFor="firstname">Seasonality</label>
-                        <input id="firstname" type="text" defaultValue="Seasonality" className="w-full rounded-md focus:ring focus:ring-opacity-75 p-2" {...register("seasonality", { required: true })} />
+                        <input id="firstname" type="text" placeholder="Seasonality" className="w-full rounded-md focus:ring focus:ring-opacity-75 p-2" {...register("seasonality", { required: true })} />
                         {errors.seasonality && <span className="text-red-500 test-sm">This field is required</span>}
                     </div>
                     <div className="col-span-full md:col-span-2">
                         <label htmlFor="firstname">Travel Time</label>
-                        <input id="firstname" type="text" defaultValue="Travel Time" className="w-full rounded-md focus:ring focus:ring-opacity-75 p-2" {...register("travel_time", { required: true })} />
+                        <input id="firstname" type="text" placeholder="Travel Time" className="w-full rounded-md focus:ring focus:ring-opacity-75 p-2" {...register("travel_time", { required: true })} />
                         {errors.travel_time && <span className="text-red-500 test-sm">This field is required</span>}
                     </div>
                     
                     <div className="col-span-full md:col-span-2">
                         <label htmlFor="firstname">Total Visitors Per Year</label>
-                        <input id="firstname" type="text" defaultValue="Total Visitors Per Year" className="w-full rounded-md focus:ring focus:ring-opacity-75 p-2" {...register("total_visitors_per_year", { required: true })} />
+                        <input id="firstname" type="text" placeholder="Total Visitors Per Year" className="w-full rounded-md focus:ring focus:ring-opacity-75 p-2" {...register("total_visitors_per_year", { required: true })} />
                         {errors.total_visitors_per_year && <span className="text-red-500 test-sm">This field is required</span>}
                     </div>
                     

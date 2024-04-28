@@ -61,7 +61,7 @@ const Register = () => {
                     <label className="label">
                         <span className="label-text">Name</span>
                     </label>
-                    <input type="text" defaultValue="Name" className="input input-bordered" {...register("name", { required: true })} />
+                    <input type="text" placeholder="Name" className="input input-bordered" {...register("name", { required: true })} />
                     {errors.name && <span className="text-red-500">This field is required</span>
                     }
                 </div>
@@ -69,14 +69,14 @@ const Register = () => {
                     <label className="label">
                         <span className="label-text">Email</span>
                     </label>
-                    <input type="email" defaultValue="Email" className="input input-bordered"{...register("email", { required: true })} />
+                    <input type="email" placeholder="Email" className="input input-bordered"{...register("email", { required: true })} />
                     {errors.email && <span className="text-red-500">This field is required</span>}
                 </div>
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text">PhotoURL</span>
                     </label>
-                    <input type="text" defaultValue="PhotoURL" className="input input-bordered" {...register("photo", { required: true })} />
+                    <input type="text" placeholder="PhotoURL" className="input input-bordered" {...register("photo", { required: true })} />
                     {errors.photo && <span className="text-red-500">This field is required</span>}
                 </div>
                 <div className="form-control">
@@ -88,7 +88,7 @@ const Register = () => {
                             }
                         </span>
                     </label>
-                    <input type={showPassword ? "text" : "password"} defaultValue="password" className="input input-bordered" {...register("password", { required: true })} />
+                    <input type={showPassword ? "text" : "password"} placeholder="password" className="input input-bordered" {...register("password", { required: true })} />
 
                     {errors.password && <span className="text-red-500">This field is required</span> || error && <span className="text-red-500" >{error}</span>}
                     <label className="label">
