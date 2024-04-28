@@ -22,7 +22,7 @@ const Details = () => {
     return (
         <div className="container mx-auto my-12">
 
-            <Helmet><title>Dream Wander | Home</title></Helmet>
+            <Helmet><title>Dream Wander | Details</title></Helmet>
 
             <div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row">
                 <img src={image} alt="" className="max-h-80 dark:bg-gray-500 aspect-video" />

@@ -10,6 +10,7 @@ import AllTouristsSports from "../pages/AllTouristSpots";
 import MyList from "../pages/MyList";
 import UpdateSpot from "../pages/UpdateSpot";
 import Details from "../pages/Details";
+import CountryBaseSpot from "../pages/CountryBaseSpot";
 
 const router = createBrowserRouter([
     {
@@ -40,6 +41,11 @@ const router = createBrowserRouter([
           path:"/details/:id",
           element:<PrivetRoute><Details></Details></PrivetRoute>,
           loader: ({params})=> fetch(`http://localhost:5000/single-spot/${params.id}`),
+        },
+        {
+          path:"/countryBaseSpot/:country",
+          element:<PrivetRoute><CountryBaseSpot></CountryBaseSpot></PrivetRoute>,
+          loader: ({params})=> fetch(`http://localhost:5000/countryBasespots/${params.country}`),
         },
         {
           path:"/login",
