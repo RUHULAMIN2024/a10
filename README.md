@@ -1,8 +1,14 @@
-# React + Vite
+## B9 A10 Type-01 Requirements
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Dream Wander
 
-Currently, two official plugins are available:
+## http://my-assignment-10.surge.sh/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features:
+
+- User Registration and Login
+- Login with Google and Github
+- Responsive Design
+- Add Spot Oportunaty
+- User friendly 
+- Tourist Spot Cart
