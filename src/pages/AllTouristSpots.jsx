@@ -21,8 +21,8 @@ const AllTouristsSports = () => {
         <div className="container mx-auto">
             <Helmet><title>Dream Wander | All Spot</title></Helmet>
             <div className="text-center mt-10">
-                <select onChange={handleSelect} className="select text-2xl text-white bg-primary border-none  ">
-                    <option defaultValue>Sort By</option>
+                <select onChange={handleSelect} className="select text-2xl text-white bg-primary border-none ">
+                    <option defaultValue>Short By</option>
                     <option value={'average_cost'}>Average Cost</option>
                 </select>
             </div>

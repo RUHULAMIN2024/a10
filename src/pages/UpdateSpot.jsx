@@ -6,8 +6,6 @@ const UpdateSpot = () => {
 
     const spot = useLoaderData();
 
-    console.log(spot)
-
     const {
         _id,
         tourists_spot_name,
@@ -57,7 +55,6 @@ const UpdateSpot = () => {
             })
             .then(res => res.json(updateSpot))
             .then(data => {
-                console.log(data)
                 if(data.modifiedCount>0){
                     Swal.fire({
                         title: "success",
@@ -83,7 +80,16 @@ const UpdateSpot = () => {
                     </div>
                     <div className="col-span-full md:col-span-2">
                         <label htmlFor="firstname">Country Name</label>
-                        <input id="firstname" type="text" required defaultValue={country_Name} name="country_Name" className="w-full rounded-md focus:ring focus:ring-opacity-75 p-2" />
+                        <select id="firstname" required name="country_Name" className="  border-none w-full rounded-md focus:ring focus:ring-opacity-75 p-2 "  >
+                            <option defaultValue={country_Name} >{country_Name} </option>
+                            <option value="USA">USA</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Brazil">Brazil</option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="Mexico">Mexico</option>
+                            <option value="Peru">Peru</option>
+                        </select>
+                       
                     </div>
                     <div className="col-span-full md:col-span-2">
                         <label htmlFor="firstname">Location </label>
