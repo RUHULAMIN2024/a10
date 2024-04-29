@@ -21,17 +21,17 @@ const router = createBrowserRouter([
         {
           path:"/",
           element:<Home></Home>,
-          loader: ()=> fetch('http://localhost:5000/tourist-spots')
+          loader: ()=> fetch('https://server-10-theta.vercel.app/tourist-spots')
         },
         {
           path:"/all-tourist-spots",
           element:<AllTouristsSports></AllTouristsSports>,
-          loader: ()=> fetch('http://localhost:5000/tourist-spots')
+          loader: ()=> fetch('https://server-10-theta.vercel.app/tourist-spots')
         },
         {
           path:"/update-spot/:id",
-          element:<UpdateSpot></UpdateSpot>,
-          loader: ({params})=> fetch(`http://localhost:5000/single-spot/${params.id}`)
+          element:<PrivetRoute><UpdateSpot></UpdateSpot></PrivetRoute>,
+          loader: ({params})=> fetch(`https://server-10-theta.vercel.app/single-spot/${params.id}`)
         },
         {
           path:"/my-list",
@@ -40,12 +40,12 @@ const router = createBrowserRouter([
         {
           path:"/details/:id",
           element:<PrivetRoute><Details></Details></PrivetRoute>,
-          loader: ({params})=> fetch(`http://localhost:5000/single-spot/${params.id}`),
+          loader: ({params})=> fetch(`https://server-10-theta.vercel.app/single-spot/${params.id}`),
         },
         {
           path:"/countryBaseSpot/:country",
           element:<PrivetRoute><CountryBaseSpot></CountryBaseSpot></PrivetRoute>,
-          loader: ({params})=> fetch(`http://localhost:5000/countryBasespots/${params.country}`),
+          loader: ({params})=> fetch(`https://server-10-theta.vercel.app/countryBasespots/${params.country}`),
         },
         {
           path:"/login",

@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { FaRegEyeSlash, FaRegEye } from "react-icons/fa";
 import { toast } from "react-toastify";
+import Swal from "sweetalert2";
 
 
 const Login = () => {
@@ -24,10 +25,20 @@ const Login = () => {
         loginUser(email, password)
             .then(result => {
                 console.log(result)
+                Swal.fire({
+                    title: "success",
+                    text: "Login Successfully ",
+                    icon: "success"
+
+                });
                 navigate(location?.state ? location.state : '/')
             })
             .catch(error=>{
-                toast.error("invalid email or password")
+                Swal.fire({
+                    title: 'Error!',
+                    text: 'invalid email or password',
+                    icon: 'error'
+                  })
             })
     }
 

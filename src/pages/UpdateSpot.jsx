@@ -47,9 +47,8 @@ const UpdateSpot = () => {
             seasonality,
             travel_time,
             total_visitors_per_year};
-            console.log(updateSpot)
 
-            fetch(`http://localhost:5000/tourist-spots/${_id}`, {
+            fetch(`https://server-10-theta.vercel.app/tourist-spots/${_id}`, {
                 method: 'PUT',
                 headers:{
                     'content-type':'application/json'

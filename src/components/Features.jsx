@@ -1,9 +1,10 @@
+import { Typewriter } from 'react-simple-typewriter'
 
 const Featurs = () => {
     return (
         <section className="m-4 md:m-8 dark:bg-gray-100 dark:text-gray-800">
             <div className="container mx-auto p-4 my-6 space-y-2 text-center">
-                <h2 className="text-2xl md:text-4xl font-bold">All the features you want</h2>
+                <h2 className="text-2xl md:text-4xl font-bold"><Typewriter loop={0} typeSpeed={80} words={['All the features you want']} /></h2>
             </div>
             <div className="container mx-auto grid justify-center gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 <div className="flex flex-col items-center p-4">

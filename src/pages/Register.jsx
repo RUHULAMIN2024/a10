@@ -2,10 +2,11 @@ import { useState } from "react";
 import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
-import { Link,  } from "react-router-dom";
+import { Link, } from "react-router-dom";
 import { toast } from "react-toastify";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { FaRegEyeSlash, FaRegEye } from "react-icons/fa";
+import Swal from "sweetalert2";
 
 const Register = () => {
 
@@ -24,7 +25,7 @@ const Register = () => {
 
     const onSubmit = (data) => {
         setError("")
-        const { name,photo, email, password } = data;
+        const { name, photo, email, password } = data;
         console.log(data)
         if (password.length < 6) {
             setError("password should be at least 6 characters")
@@ -41,14 +42,23 @@ const Register = () => {
         createUser(email, password)
             .then(result => {
                 userUpdate(name, photo)
-                toast.success("you have succesfuly registered!")
+                Swal.fire({
+                    title: "success",
+                    text: "Registered Successfully ",
+                    icon: "success"
+
+                });
             })
-            .catch(error=>{
-                toast.error("Firebase Error")
+            .catch(error => {
+                Swal.fire({
+                    title: 'Error!',
+                    text: 'Firebase Error',
+                    icon: 'error'
+                  })
                 console.log(error)
             })
 
-            
+
 
     }
 

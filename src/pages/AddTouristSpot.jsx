@@ -18,7 +18,7 @@ const AddTouristsSpot = () => {
     const onSubmit = data => {
         const info={...data, userEmail, userName}
 
-        fetch('http://localhost:5000/tourist-spots', {
+        fetch('https://server-10-theta.vercel.app/tourist-spots', {
             method:'POST',
             headers:{
                 'content-type':'application/json'
