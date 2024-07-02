@@ -10,12 +10,12 @@
 - User friendly 
 
 ## Technologies:
--HTML 
--CSS
--JavaScript 
--Tailwind CSS 
--React.js
--Node.js
--Express.js
--MongoDB
+- HTML 
+- CSS
+- JavaScript 
+- Tailwind CSS 
+- React.js
+- Node.js
+- Express.js
+- MongoDB
 
