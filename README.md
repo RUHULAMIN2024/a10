@@ -1,6 +1,6 @@
 # Dream Wander (Client)
 ## Tourism Management Website
-### http://my-assignment-10.surge.sh/
+### https://my-assignment-10.surge.sh/
 
 ## Features:
 - User Registration and Login
